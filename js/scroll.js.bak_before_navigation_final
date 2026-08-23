@@ -1,0 +1,87 @@
+function pageDown(){
+    window.scrollBy({
+        top:350,
+        behavior:"smooth"
+    });
+}
+
+function pageUp(){
+    window.scrollBy({
+        top:-350,
+        behavior:"smooth"
+    });
+}
+
+let sections=[];
+let currentSection=0;
+
+function loadSections(){
+    sections=[
+        document.querySelector("header"),
+        ...document.querySelectorAll("section")
+    ];
+}
+
+window.addEventListener("load",loadSections);
+
+
+/* keyboard section navigation */
+document.addEventListener("keydown",function(e){
+
+if(!sections.length) return;
+
+if(e.key==="ArrowDown" || e.key==="ArrowRight"){
+
+currentSection=Math.min(currentSection+1,sections.length-1);
+
+sections[currentSection].scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+if(e.key==="ArrowUp" || e.key==="ArrowLeft"){
+
+currentSection=Math.max(currentSection-1,0);
+
+sections[currentSection].scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+});
+
+
+/* mobile swipe */
+let startX=0;
+
+document.addEventListener("touchstart",e=>{
+startX=e.touches[0].clientX;
+});
+
+
+document.addEventListener("touchend",e=>{
+
+let endX=e.changedTouches[0].clientX;
+
+if(Math.abs(startX-endX)<80) return;
+
+
+if(startX>endX){
+
+currentSection=Math.min(currentSection+1,sections.length-1);
+
+}else{
+
+currentSection=Math.max(currentSection-1,0);
+
+}
+
+
+sections[currentSection].scrollIntoView({
+behavior:"smooth"
+});
+
+});

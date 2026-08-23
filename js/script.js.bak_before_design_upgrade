@@ -1,0 +1,123 @@
+﻿let comments = JSON.parse(localStorage.getItem("aura_comments")) || [];
+
+function addComment(){
+
+    let box=document.getElementById("commentBox");
+
+    if(box.value.trim()=="")
+        return;
+
+    comments.push({
+        text:box.value,
+        date:new Date().toLocaleDateString("ar")
+    });
+
+    localStorage.setItem(
+        "aura_comments",
+        JSON.stringify(comments)
+    );
+
+    box.value="";
+    showComments();
+}
+
+
+function showComments(){
+
+    let list=document.getElementById("commentsList");
+
+    list.innerHTML="";
+
+    comments.forEach(c=>{
+
+        let div=document.createElement("div");
+
+        div.className="comment";
+
+        div.innerHTML=
+        "<p>"+c.text+"</p>"+
+        "<small>"+c.date+"</small>";
+
+        list.appendChild(div);
+
+    });
+
+}
+
+
+function filterComments(){
+
+    let search=
+    document.getElementById("searchBox").value.toLowerCase();
+
+    document.querySelectorAll(".comment")
+    .forEach(item=>{
+
+        item.style.display =
+        item.innerText.toLowerCase()
+        .includes(search)
+        ? "block"
+        : "none";
+
+    });
+
+}
+
+
+showComments();
+
+function setRating(value){
+
+localStorage.setItem("aura_rating",value);
+
+document.getElementById("ratingText").innerHTML =
+"شكراً لتقييمك ⭐ ".repeat(value);
+
+}
+
+
+let downloads =
+Number(localStorage.getItem("aura_downloads")) || 0;
+
+function updateDownloads(){
+
+let box=document.getElementById("downloads");
+
+if(box){
+box.innerHTML=downloads;
+}
+
+}
+
+document.querySelector(".download")?.addEventListener(
+"click",
+function(){
+
+downloads++;
+
+localStorage.setItem(
+"aura_downloads",
+downloads
+);
+
+updateDownloads();
+
+});
+
+updateDownloads();
+
+
+document.querySelectorAll(".screens img").forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+img.classList.remove("clicked");
+
+void img.offsetWidth;
+
+img.classList.add("clicked");
+
+});
+
+});
+

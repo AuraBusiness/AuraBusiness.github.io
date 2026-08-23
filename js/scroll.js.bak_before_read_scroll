@@ -1,0 +1,28 @@
+function pageDown(){
+
+window.scrollBy({
+
+top:350,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+function pageUp(){
+
+window.scrollBy({
+
+top:-350,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+// keyboard section navigation later
+
