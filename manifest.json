@@ -1,4 +1,4 @@
-﻿{
+{
 "name": "AURA BUSINESS",
 "short_name": "AURA",
 "description": "نظام إدارة الأعمال والمبيعات",
@@ -8,8 +8,8 @@
 "theme_color": "#D6B36A",
 "icons": [
  {
-  "src": "images/app_icon.png",
-  "sizes": "512x512",
+  "src": "images/favicon-144.png",
+  "sizes": "144x144",
   "type": "image/png"
  }
 ]

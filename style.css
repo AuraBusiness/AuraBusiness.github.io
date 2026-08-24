@@ -233,6 +233,13 @@ header{
 @media(max-width:600px){
     .screens{
         grid-template-columns:1fr;
+        width:100%;
+    }
+
+    .screens img{
+        width:90vw;
+        max-width:280px;
+        height:auto;
     }
 }
 
@@ -1919,3 +1926,782 @@ box-shadow:0 20px 45px rgba(54,169,214,.35);
 }
 
 /* AURA DEMO SIDE DOWNLOADS END */
+
+
+/* ===== FINAL MOBILE SLIDE LAYOUT ===== */
+@media screen and (max-width:700px){
+  header{
+    min-height:100vh;
+    padding:72px 16px 24px !important;
+    gap:18px !important;
+  }
+
+  header h1{
+    font-size:34px !important;
+    line-height:1.2 !important;
+    letter-spacing:1px !important;
+  }
+
+  header h2{
+    font-size:23px !important;
+    line-height:1.3 !important;
+  }
+
+  header p{
+    max-width:100% !important;
+    font-size:15px !important;
+    line-height:1.7 !important;
+    margin:12px 0 !important;
+  }
+
+  .hero-badge{
+    padding:7px 14px !important;
+    font-size:11px !important;
+    margin-bottom:10px !important;
+  }
+
+  .main-icon{
+    width:150px !important;
+    height:150px !important;
+    padding:10px !important;
+    border-radius:28px !important;
+  }
+
+  section{
+    padding:34px 16px !important;
+  }
+
+  section h2,
+  #screens h2{
+    font-size:26px !important;
+    line-height:1.25 !important;
+    margin-bottom:22px !important;
+  }
+
+  .cards,
+  .why-cards,
+  .how-cards{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+    padding:0 !important;
+  }
+
+  .cards div,
+  .why-cards div,
+  .how-cards div{
+    padding:20px !important;
+    border-radius:22px !important;
+  }
+
+  #stats{
+    grid-template-columns:1fr 1fr !important;
+    gap:10px !important;
+    padding:28px 16px !important;
+  }
+
+  #stats div{
+    padding:18px 10px !important;
+    border-radius:20px !important;
+  }
+
+  #stats strong{
+    font-size:28px !important;
+  }
+
+  #stats p{
+    font-size:13px !important;
+    line-height:1.5 !important;
+  }
+
+  #screens{
+    padding:34px 12px !important;
+  }
+
+  .screens{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+    width:100% !important;
+    perspective:none !important;
+  }
+
+  .screens img{
+    width:72vw !important;
+    max-width:250px !important;
+    height:auto !important;
+    max-height:68vh !important;
+    margin:0 auto !important;
+    padding:6px !important;
+    border-width:5px !important;
+    border-radius:28px !important;
+  }
+
+  .developer,
+  #contact{
+    margin:14px 0 !important;
+    padding:24px 16px !important;
+    border-radius:26px !important;
+  }
+
+  .download,
+  .app-download-card{
+    font-size:15px !important;
+    padding:13px 18px !important;
+  }
+
+  .preview-box,
+  .app-info-premium,
+  .comments-card,
+  .contact-buttons,
+  .rate-buttons{
+    max-width:100% !important;
+    width:100% !important;
+  }
+}
+
+
+/* ===== MOBILE SLIDE INTERNAL SCROLL ===== */
+@media screen and (max-width:700px){
+
+  .aura-mobile-track > header,
+  .aura-mobile-track > section{
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior:contain;
+    scrollbar-width:none;
+    padding-bottom:80px !important;
+  }
+
+  .aura-mobile-track > header::-webkit-scrollbar,
+  .aura-mobile-track > section::-webkit-scrollbar{
+    display:none;
+  }
+
+  #screens,
+  #app-info{
+    justify-content:flex-start !important;
+  }
+
+  #screens .screens{
+    padding-bottom:30px !important;
+  }
+
+  #app-info{
+    padding-bottom:100px !important;
+  }
+}
+
+
+/* =========================================================
+   AURA BUSINESS - DYNAMIC MOBILE RESPONSIVE SYSTEM
+   ========================================================= */
+
+@media screen and (max-width:700px){
+
+  /* الشريحة نفسها تتبع حجم الجهاز */
+  .aura-mobile-track > header,
+  .aura-mobile-track > section{
+    width:100vw !important;
+    min-width:100vw !important;
+    max-width:100vw !important;
+    min-height:100dvh !important;
+    height:100dvh !important;
+    max-height:100dvh !important;
+    box-sizing:border-box !important;
+    padding:
+      clamp(20px,5vw,42px)
+      clamp(12px,4vw,28px)
+      clamp(55px,10vh,100px) !important;
+  }
+
+  /* العناوين */
+  .aura-mobile-track h1{
+    font-size:clamp(26px,8vw,42px) !important;
+    line-height:1.2 !important;
+  }
+
+  .aura-mobile-track h2{
+    font-size:clamp(21px,6vw,32px) !important;
+    line-height:1.25 !important;
+    margin-bottom:clamp(14px,4vh,28px) !important;
+  }
+
+  .aura-mobile-track h3{
+    font-size:clamp(17px,5vw,24px) !important;
+  }
+
+  .aura-mobile-track p,
+  .aura-mobile-track li{
+    font-size:clamp(12px,3.8vw,17px) !important;
+    line-height:1.65 !important;
+  }
+
+  /* المسافات */
+  .aura-mobile-track .cards,
+  .aura-mobile-track .why-cards,
+  .aura-mobile-track .how-cards,
+  .aura-mobile-track .screens{
+    width:100% !important;
+    max-width:100% !important;
+    gap:clamp(8px,3vw,18px) !important;
+  }
+
+  /* جميع البطاقات */
+  .aura-mobile-track .cards div,
+  .aura-mobile-track .why-cards div,
+  .aura-mobile-track .how-cards div,
+  .aura-mobile-track #stats div,
+  .aura-mobile-track .developer-card,
+  .aura-mobile-track .comments-card,
+  .aura-mobile-track .preview-box,
+  .aura-mobile-track .app-info-premium{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+    padding:clamp(12px,4vw,24px) !important;
+    border-radius:clamp(16px,5vw,28px) !important;
+  }
+
+  /* الصور */
+  .aura-mobile-track img{
+    max-width:100% !important;
+    height:auto !important;
+  }
+
+  .aura-mobile-track .main-icon{
+    width:clamp(105px,34vw,170px) !important;
+    height:auto !important;
+    aspect-ratio:1 !important;
+    padding:clamp(6px,2vw,12px) !important;
+  }
+
+  .aura-mobile-track .screens{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    align-items:center !important;
+    justify-items:center !important;
+  }
+
+  .aura-mobile-track .screens img{
+    width:clamp(105px,32vw,150px) !important;
+    max-width:42vw !important;
+    height:auto !important;
+    max-height:58dvh !important;
+    object-fit:contain !important;
+    padding:4px !important;
+    border-width:3px !important;
+    border-radius:clamp(16px,5vw,26px) !important;
+  }
+
+  /* الإحصائيات ديناميكية */
+  .aura-mobile-track #stats{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    width:100% !important;
+    padding:clamp(12px,4vw,24px) !important;
+  }
+
+  .aura-mobile-track #stats strong{
+    font-size:clamp(22px,7vw,34px) !important;
+  }
+
+  /* صناديق المعاينة */
+  .aura-mobile-track .preview-box{
+    min-height:0 !important;
+    height:auto !important;
+  }
+
+  /* معلومات التطبيق */
+  .aura-mobile-track .app-info-premium,
+  .aura-mobile-track .app-details,
+  .aura-mobile-track .app-info-logo{
+    min-width:0 !important;
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  .aura-mobile-track .app-info-logo img{
+    width:clamp(70px,24vw,120px) !important;
+    height:auto !important;
+  }
+
+  /* أزرار التحميل */
+  .aura-mobile-track .aura-download-actions,
+  .aura-mobile-track .aura-download-actions-card{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .aura-mobile-track .aura-download-actions > a,
+  .aura-mobile-track .app-download-card{
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    font-size:clamp(13px,4vw,17px) !important;
+    padding:clamp(10px,3vw,15px) !important;
+  }
+
+  /* منع أي عنصر داخلي من فرض عرض على الهاتف */
+  .aura-mobile-track *{
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  .aura-mobile-track input,
+  .aura-mobile-track textarea,
+  .aura-mobile-track button,
+  .aura-mobile-track select{
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  /* التمرير داخل الشريحة عند الحاجة */
+  .aura-mobile-track > header,
+  .aura-mobile-track > section{
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+
+
+/* ===== MOBILE HERO BALANCE ===== */
+@media screen and (max-width:700px){
+
+  .aura-mobile-track > header .main-icon{
+    order:-1;
+    width:clamp(145px,42vw,190px) !important;
+    height:auto !important;
+    aspect-ratio:1 !important;
+    padding:clamp(8px,2.5vw,12px) !important;
+    border-radius:clamp(22px,6vw,34px) !important;
+    margin:0 auto !important;
+  }
+
+  .aura-mobile-track > header .aura-download-actions{
+    width:100% !important;
+    max-width:100% !important;
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:10px !important;
+  }
+
+  .aura-mobile-track > header .aura-download-actions > a{
+    flex:0 1 auto !important;
+    width:auto !important;
+    min-width:0 !important;
+    max-width:46% !important;
+    padding:
+      clamp(8px,2.2vw,12px)
+      clamp(10px,3vw,18px) !important;
+    font-size:clamp(11px,3vw,14px) !important;
+    line-height:1.4 !important;
+    border-radius:20px !important;
+    white-space:normal !important;
+  }
+
+  .aura-mobile-track > header .aura-download-actions small,
+  .aura-mobile-track > header .aura-download-actions span{
+    font-size:10px !important;
+  }
+}
+
+
+/* ===== MOBILE NAV HORIZONTAL + CLEAN FLOATING DOWNLOADS ===== */
+@media screen and (max-width:700px){
+
+  /* القائمة العلوية: صف أفقي صغير */
+  nav{
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    padding:8px 10px !important;
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:8px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    white-space:nowrap !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+
+  nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  nav .logo{
+    flex:0 0 auto !important;
+    font-size:14px !important;
+    gap:5px !important;
+  }
+
+  nav .logo img{
+    width:32px !important;
+    height:32px !important;
+  }
+
+  nav .links{
+    flex:0 0 auto !important;
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:6px !important;
+    width:auto !important;
+  }
+
+  nav .links a{
+    flex:0 0 auto !important;
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:7px 10px !important;
+    font-size:11px !important;
+    line-height:1.2 !important;
+    border-radius:18px !important;
+    white-space:nowrap !important;
+  }
+
+  /* مساحة أعلى ديناميكية حتى لا تغطي القائمة المحتوى */
+  .aura-mobile-track > header,
+  .aura-mobile-track > section{
+    padding-top:calc(var(--aura-nav-height) + clamp(12px,3vw,20px)) !important;
+  }
+
+  /* إلغاء أزرار التحميل العائمة من باقي الصفحات */
+  .floating-download-group{
+    display:none !important;
+  }
+
+  .floating-download{
+    display:none !important;
+  }
+
+  /* أزرار التحميل الموجودة في الشاشة الرئيسية فقط */
+  .aura-mobile-track > header .aura-download-actions{
+    display:flex !important;
+  }
+
+  .aura-mobile-track > header .aura-download-actions > a{
+    display:inline-flex !important;
+  }
+}
+
+
+/* ===== MOBILE NAV WRAP ===== */
+@media screen and (max-width:700px){
+
+  nav{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:28vh !important;
+    padding:7px 8px !important;
+    flex-wrap:wrap !important;
+    align-content:center !important;
+    overflow-x:hidden !important;
+    overflow-y:auto !important;
+    white-space:normal !important;
+    row-gap:5px !important;
+  }
+
+  nav .logo{
+    flex:0 0 auto !important;
+  }
+
+  nav .links{
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:5px !important;
+    width:auto !important;
+  }
+
+  nav .links a{
+    flex:0 0 auto !important;
+    padding:6px 9px !important;
+    font-size:10px !important;
+    border-radius:16px !important;
+  }
+
+}
+
+
+/* =========================================================
+   FINAL MOBILE / APP INFO / RATING CLEANUP
+   ========================================================= */
+
+/* أسهم التنقل لم تعد مطلوبة */
+#pageNav{
+    display:none !important;
+}
+
+/* ===== APP INFO DOWNLOAD BUTTONS ===== */
+
+.app-info-premium .aura-download-actions-card{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:stretch !important;
+    gap:14px !important;
+    margin-top:22px !important;
+}
+
+.app-info-premium .app-download-card{
+    flex:1 1 220px !important;
+    min-width:0 !important;
+    max-width:320px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    flex-direction:column !important;
+    gap:5px !important;
+    padding:15px 20px !important;
+    border-radius:18px !important;
+    border:1px solid rgba(214,179,106,.45) !important;
+    background:linear-gradient(135deg,#D6B36A,#B88A3D) !important;
+    color:#181B2A !important;
+    text-decoration:none !important;
+    font-weight:800 !important;
+    box-shadow:0 10px 25px rgba(0,0,0,.20) !important;
+    transition:.25s ease !important;
+}
+
+.app-info-premium .app-download-card:hover{
+    transform:translateY(-3px) !important;
+    box-shadow:0 14px 30px rgba(0,0,0,.28) !important;
+}
+
+.app-info-premium .demo-download-card{
+    background:linear-gradient(135deg,#163A5F,#0B2945) !important;
+    color:#FFFFFF !important;
+    border-color:rgba(54,169,214,.45) !important;
+}
+
+.app-info-premium .app-download-card span{
+    color:inherit !important;
+    font-size:11px !important;
+    opacity:.85 !important;
+}
+
+/* ===== RATING BUTTONS ===== */
+
+.rate-buttons{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:12px !important;
+    width:100% !important;
+    padding:12px !important;
+    box-sizing:border-box !important;
+}
+
+.rate-buttons button{
+    flex:0 0 auto !important;
+    min-width:72px !important;
+    margin:0 !important;
+    padding:10px 14px !important;
+    border-radius:16px !important;
+    border:1px solid rgba(214,179,106,.30) !important;
+    background:#252A40 !important;
+    color:#FFFFFF !important;
+    box-shadow:0 6px 16px rgba(0,0,0,.18) !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    transition:.22s ease !important;
+}
+
+.rate-buttons button:hover{
+    transform:translateY(-2px) !important;
+    background:#163A5F !important;
+    border-color:#36A9D6 !important;
+}
+
+.rate-buttons button:active,
+.rate-buttons button.active,
+.rate-buttons button.selected{
+    background:linear-gradient(135deg,#D6B36A,#B88A3D) !important;
+    color:#181B2A !important;
+    border-color:#D6B36A !important;
+}
+
+/* ===== MOBILE BALANCE ===== */
+
+@media screen and (max-width:700px){
+
+  .app-info-premium .aura-download-actions-card{
+      flex-direction:column !important;
+      gap:10px !important;
+      margin-top:16px !important;
+  }
+
+  .app-info-premium .app-download-card{
+      width:100% !important;
+      max-width:none !important;
+      flex:0 0 auto !important;
+      padding:12px 16px !important;
+      border-radius:16px !important;
+      font-size:13px !important;
+  }
+
+  .rate-buttons{
+      gap:9px !important;
+      padding:14px 8px !important;
+  }
+
+  .rate-buttons button{
+      min-width:64px !important;
+      padding:9px 11px !important;
+      border-radius:14px !important;
+      font-size:12px !important;
+  }
+
+}
+
+
+/* ===== DEVELOPER PHONE - FINAL STYLE ===== */
+
+.developer-contact{
+    color:#D6B36A !important;
+    text-decoration:none !important;
+    font-weight:800 !important;
+}
+
+.developer-contact:hover{
+    color:#FFFFFF !important;
+}
+
+@media screen and (max-width:700px){
+    .developer-contact{
+        color:#D6B36A !important;
+        font-size:clamp(14px,4vw,18px) !important;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP VISUAL SYNC
+   نفس تحسينات الجوال على سطح المكتب
+   ========================================================= */
+
+@media screen and (min-width:701px){
+
+  /* إزالة أسهم التنقل */
+  #pageNav{
+    display:none !important;
+  }
+
+  /* أزرار التحميل - معلومات التطبيق */
+  .app-info-premium .aura-download-actions-card{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:stretch !important;
+    gap:16px !important;
+    margin-top:24px !important;
+  }
+
+  .app-info-premium .app-download-card{
+    flex:0 1 280px !important;
+    min-width:220px !important;
+    max-width:320px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    flex-direction:column !important;
+    gap:6px !important;
+    padding:16px 22px !important;
+    border-radius:18px !important;
+    border:1px solid rgba(214,179,106,.45) !important;
+    background:linear-gradient(135deg,#D6B36A,#B88A3D) !important;
+    color:#181B2A !important;
+    text-decoration:none !important;
+    font-weight:800 !important;
+    box-shadow:0 10px 25px rgba(0,0,0,.20) !important;
+    transition:.25s ease !important;
+  }
+
+  .app-info-premium .app-download-card:hover{
+    transform:translateY(-3px) !important;
+    box-shadow:0 14px 30px rgba(0,0,0,.28) !important;
+  }
+
+  .app-info-premium .demo-download-card{
+    background:linear-gradient(135deg,#163A5F,#0B2945) !important;
+    color:#FFFFFF !important;
+    border-color:rgba(54,169,214,.45) !important;
+  }
+
+  .app-info-premium .app-download-card span{
+    color:inherit !important;
+    font-size:11px !important;
+    opacity:.85 !important;
+  }
+
+  /* أزرار التقييم */
+  .rate-buttons{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:12px !important;
+    width:100% !important;
+    padding:14px !important;
+    box-sizing:border-box !important;
+  }
+
+  .rate-buttons button{
+    flex:0 0 auto !important;
+    min-width:76px !important;
+    margin:0 !important;
+    padding:10px 16px !important;
+    border-radius:16px !important;
+    border:1px solid rgba(214,179,106,.30) !important;
+    background:#252A40 !important;
+    color:#FFFFFF !important;
+    box-shadow:0 6px 16px rgba(0,0,0,.18) !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    transition:.22s ease !important;
+  }
+
+  .rate-buttons button:hover{
+    transform:translateY(-2px) !important;
+    background:#163A5F !important;
+    border-color:#36A9D6 !important;
+  }
+
+  .rate-buttons button:active,
+  .rate-buttons button.active,
+  .rate-buttons button.selected{
+    background:linear-gradient(135deg,#D6B36A,#B88A3D) !important;
+    color:#181B2A !important;
+    border-color:#D6B36A !important;
+  }
+
+  /* رقم الهاتف - لون الهوية وليس الأزرق الافتراضي */
+  .developer-contact{
+    color:#D6B36A !important;
+    text-decoration:none !important;
+    font-weight:800 !important;
+  }
+
+  .developer-contact:hover{
+    color:#FFFFFF !important;
+  }
+}
