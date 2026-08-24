@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: sitemap.xml
+Sitemap: https://aurabusiness.github.io/sitemap.xml
